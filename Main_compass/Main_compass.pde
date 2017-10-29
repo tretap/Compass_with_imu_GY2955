@@ -27,21 +27,23 @@ void setup(){
 
 void draw(){
    background(255);
-  
-   xh = int(readMag(byte(0x04)));
-   xl = int(readMag(byte(0x03)));
    
-   yh = int(readMag(byte(0x06)));
-   yl = int(readMag(byte(0x05)));
-   
-   zh = int(readMag(byte(0x08)));
-   zl = int(readMag(byte(0x07)));
-   
-   readMag(byte(0x09));
-   
-   x = (xh << 8) | (xl & 0xFF);
-   y = (yh << 8) | (yl & 0xFF);
-   z = (zh << 8) | (zl & 0xFF);
-   
-   //println("X: " +x+" Y: " +y+ " Z: "+z);
+   if (I2C.list() != null)
+   {
+     xh = int(readMag(byte(0x04)));
+     xl = int(readMag(byte(0x03)));
+     
+     yh = int(readMag(byte(0x06)));
+     yl = int(readMag(byte(0x05)));
+     
+     zh = int(readMag(byte(0x08)));
+     zl = int(readMag(byte(0x07)));
+     
+     readMag(byte(0x09));
+     
+     x = (xh << 8) | (xl & 0xFF);
+     y = (yh << 8) | (yl & 0xFF);
+     z = (zh << 8) | (zl & 0xFF);
+   }   
+   println("X: " +x+" Y: " +y+ " Z: "+z);
 }
