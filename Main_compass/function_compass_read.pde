@@ -1,4 +1,4 @@
-byte read(byte address)
+byte i2c_read(byte address)
 {
     i2c.beginTransmission(mg_register);
     i2c.write(address);
@@ -10,7 +10,7 @@ byte read(byte address)
     return val[0];
 }
 
-void write(byte address, byte data)
+void i2c_write(byte address, byte data)
 {
     i2c.beginTransmission(mg_register);
     i2c.write(address);
