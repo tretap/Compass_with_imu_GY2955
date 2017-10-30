@@ -24,7 +24,7 @@ print("gyro_zout: "+str(gyro_zout)+" scaled: " +str(gyro_zout/131))
 print()
 
 print("Accelerometer data")
-pritn("------------------")
+print("------------------")
 
 accel_xout = read_word_2c(0x3B)
 accel_yout = read_word_2c(0x3D)
