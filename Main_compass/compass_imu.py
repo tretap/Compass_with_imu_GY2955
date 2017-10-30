@@ -8,7 +8,6 @@ power_mgmt_2 = 0x6C
 address = 0x68 
 
 bus = smbus.SMBus(1)
-
 bus.write_byte_data(address, power_mgmt_1, 0)
 
 print("Gyro Data.")

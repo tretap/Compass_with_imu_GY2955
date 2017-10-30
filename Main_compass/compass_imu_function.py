@@ -5,6 +5,9 @@ power_mgmt_1 = 0x6B
 power_mgmt_2 = 0x6C
 address = 0x68 
 
+#bus = smbus.SMBus(0 or 1) << setting like this, for use this file .
+
+
 def read_byte(adr):
 	return bus.read_byte_data(address, adr)
 
