@@ -5,6 +5,8 @@ power_mgmt_1 = 0x6B
 power_mgmt_2 = 0x6C
 address = 0x68 
 
+bus = smbus.SMBus(1)
+bus.write_byte_data(address, power_mgmt_1, 0)
 #bus = smbus.SMBus(0 or 1) << setting like this, for use this file .
 
 
