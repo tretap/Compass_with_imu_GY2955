@@ -16,4 +16,3 @@ while(1):
 	print("Hall_xout: "+str(hall_xout))
 	print("Hall_yout: "+str(hall_yout))
 	print("Hall_zout: "+str(hall_zout))
-	print()
