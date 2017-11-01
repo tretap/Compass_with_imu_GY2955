@@ -44,12 +44,12 @@ def get_x_rotation(x,y,z):
 
 #-----------------------------------------#
 
-def read_byte(adr):
-	return bus.read_byte_data(address_mag, adr)
+def read_byte_mag(adr):
+	return bus.read_byte_data(address, adr)
 
-def read_word(adr):
-	high = bus.read_byte_data(address_mag, adr)
-	low = bus.read_byte_data(address_mag, adr-1)
+def read_word_mag(adr):
+	high = bus.read_byte_data(address, adr)
+	low = bus.read_byte_data(address, adr-1)
 	val = (high << 8) + low
 
 	return val 
