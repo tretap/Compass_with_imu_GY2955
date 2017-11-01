@@ -1,5 +1,6 @@
 import smbus 
 import math 
+import os 
 
 from compass_imu_function import *
 
@@ -8,6 +9,7 @@ power_mgmt_2 = 0x6C
 address = 0x68 
 
 while(1):
+	os.system('cls' if os.name == 'nt' else 'clear')
 	print("Gyro Data.")
 	print("----------")
 
