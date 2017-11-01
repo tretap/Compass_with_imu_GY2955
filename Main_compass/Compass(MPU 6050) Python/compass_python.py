@@ -2,7 +2,7 @@ import smbus
 import math 
 import os 
 
-from compass_imu_function import *
+from compass_imu_Compass_function import *
 
 power_mgmt_1 = 0x6B
 power_mgmt_2 = 0x6C
