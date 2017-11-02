@@ -9,9 +9,9 @@ while(1):
 	print("Magnetometer Data.")
 	print("----------")
 
-	hall_xout = read_word_mag(0x04)
-	hall_yout = read_word_mag(0x06)
-	hall_zout = read_word_mag(0x08)
+	hall_xout = read_word_mag_gain(0x04)
+	hall_yout = read_word_mag_gain(0x06)
+	hall_zout = read_word_mag_gain(0x08)
 
 	print("Hall_xout: "+str(hall_xout))
 	print("Hall_yout: "+str(hall_yout))
