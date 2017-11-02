@@ -34,6 +34,25 @@ def read_word_mag_gain(adr,gain = 0.00092): #Setting gain << in their
 	val = read_word_mag(adr)
 	return val*gain
 
+def read_word_mag_sen(adr,adr_asa): #Sensitivity --> Process with measurement data 
+	val = read_word_mag(adr)
+	asa = read_byte_mag(adr_asa)
+
+	val2 = (((asa - 128)*0.5)/128)+1
+	return val * val2
+
+def self_test_mag(): #For Self_test function , confirm magnetic sensor operation on end products
+	bus.write_byte_data(address, address_mag, 0x40)
+	return bus.read_byte_data(address, address_mag)
+
+def fuse_access_mode_init_():
+	bus.write_byte_data(address, address_setting_mag, 0x1F)
+	print("Mode Change to >> FUSE ACCESS MODE << ")
+
+def _access_mode_init_():
+	bus.write_byte_data(address, address_setting_mag, 0x12)
+	print("Mode Change to >> INIT ACCESS MODE << ")
+
 #def read_word_2c(adr):
 	#val = read_word(adr)
 	#if(val >= 0x8000):
