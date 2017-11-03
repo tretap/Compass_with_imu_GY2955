@@ -3,5 +3,5 @@ Compass with IMU GY2955 (Write with Processing)
 
 create by . trethep 
 
-Main Compass - > Python for create accelo,gyro, Processing for compass 
+Main Compass - > Python for create accelo,gyro, Processing for compass <br>
              - > Compass (MPU 6050)Python ->  Python for Compass
